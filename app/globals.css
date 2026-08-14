@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #invoice-print, #invoice-print * {
+    visibility: visible;
+  }
+  #invoice-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    box-shadow: none !important;
+  }
+  .modal-close, .print-button, .email-button {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  input, button, select, textarea {
+    font-size: 16px !important;
+  }
+  
+  table {
+    font-size: 12px;
+  }
+  
+  td, th {
+    padding: 4px 6px !important;
+  }
+  
+  .grid2 {
+    grid-template-columns: 1fr !important;
+  }
+}
